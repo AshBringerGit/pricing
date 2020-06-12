@@ -6,6 +6,8 @@
     <title>Pricing</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/media.css">
     
 </head>
 <body>
@@ -14,15 +16,27 @@
              <div class="logo"><img src="img/logo.png" class="logo_img" alt="logo">
                 <h1 class="logo_text">MISOCIAL</h1>
             </div>
-             <div class="menu">
-                 <ul>
-                     <li><a href="#" class="menu_link">Home</a></li>
-                     <li><a href="#" class="menu_link">Why MISOCIAL</a></li>
-                     <li><a href="#" class="menu_link">Features</a></li>
-                     <li><a href="#" class="menu_link">Articles</a></li>
-                     <li><a href="#" class="menu_link">Pricing</a></li>
-                     <li><a href="#" class="get_started_button menu_link">get started</a></li>
-                 </ul>
+            <a href="#" class="m-menu-link">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul class="m-menu">
+                <li class="close_menu">&times;</li>
+                <li><a href="#" class="menu_link">Home</a></li>
+                <li><a href="#" class="menu_link">Why MISOCIAL</a></li>
+                <li><a href="#" class="menu_link">Features</a></li>
+                <li><a href="#" class="menu_link">Articles</a></li>
+                <li><a href="#" class="menu_link">Pricing</a></li>
+                <li><a href="#" class="get_started_button menu_link">get started</a></li>
+            </ul>
+             <div class="menu visible-lg">
+                <ul>
+                    <li><a href="#" class="menu_link">Home</a></li>
+                    <li><a href="#" class="menu_link">Why MISOCIAL</a></li>
+                    <li><a href="#" class="menu_link">Features</a></li>
+                    <li><a href="#" class="menu_link">Articles</a></li>
+                    <li><a href="#" class="menu_link">Pricing</a></li>
+                    <li><a href="#" class="get_started_button menu_link">get started</a></li>
+                </ul>
              </div>
          </div>
          <div class="main-header-text">
@@ -78,7 +92,7 @@
             <div class="logo"><img src="img/logo.png" class="logo_img" alt="logo">
                 <h1 class="footer-logo_text">MISOCIAL</h1>
             </div>
-             <div class="footer-menu">
+             <div class="footer-menu visible-lg-footer">
                 <ul>
                     <li><a href="#" class="footer-menu_link_first">Home</a></li>
                     <li><a href="#" class="footer-menu_link">Why MISOCIAL</a></li>
@@ -88,8 +102,38 @@
                     <li><a href="#" class="footer-get-menu_link">get started</a></li>
                 </ul>
              </div>
-             
          </div>
      </div>
+     <div class="line"></div>
+     <div class="legal">
+         <div class="copy">
+             <p>© 2017 Mass Impressions & Tranmautritam. Make the right impression.</p>
+         </div>
+         <div class="social">
+             <a href="#"><i class="fa fa-facebook"></i></a>
+             <a href="#"><i class="fa fa-twitter"></i></a>
+             <a href="#"><i class="fa fa-google-plus"></i></a>
+             <a href="#"><i class="fa fa-instagram"></i></a>
+         </div>
+     </div>
+
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <script>
+                $(function() {
+            var link = $('.m-menu-link');
+            var close = $('.close_menu');
+            var menu = $('.m-menu');
+            link.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m-menu-active');
+            });
+            close.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m-menu-active');
+            });
+        });
+
+     </script>
+
 </body>
 </html>
